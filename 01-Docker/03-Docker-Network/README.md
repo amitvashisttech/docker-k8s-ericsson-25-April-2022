@@ -49,3 +49,36 @@
   231  docker run -d --name my-web-3 -P amitvashist7/mypython-webapp-18-oct-2021:v2
   232  docker ps
 ```
+
+```
+ 248  docker kill $(docker ps -qa)
+  249  ls
+  250  docker ps
+  251  docker ps -a
+  252  docker rm  $(docker ps -qa )
+  253  docker network  ls
+  254  docker network  inspect 2e99aa235c8b
+  255  docker run -d --name my-web-3 -P amitvashist7/mypython-webapp-18-oct-2021:v2
+  256  docker network  inspect 2e99aa235c8b
+  257  docker network  ls
+  258  docker network create test-net
+  259  docker network  ls
+  260  docker network  inspect test-net
+  261  docker network create --help
+  262  docker network create --driver bridge --subnet=172.28.0.0/16 --ip-range=172.28.5.0/24 --gateway=172.28.5.254 mybr0
+  263  docker network  ls
+  264  docker network  inspect mybr0
+  265  docker run -d --name my-web-4 --network mybr0 -P amitvashist7/mypython-webapp-18-oct-2021:v2
+  266  docker run -d --name my-web-5 --network mybr0 -P amitvashist7/mypython-webapp-18-oct-2021:v2
+  267  docker ps
+  268  docker inspect my-web-5
+  269  docker ps
+  270  docker network ls
+  271  docker network rm test-net
+  272  docker network rm mybr0
+  273  docker network inspect mybr0
+  274  docker kill $(docker ps -qa)
+  275  docker network rm mybr0
+  276  docker ps
+  277  docker network ls
+```
