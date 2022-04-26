@@ -19,10 +19,7 @@
   130  kubectl  describe deploy helloworld-deployment
   131  kubectl rollout status deploy helloworld-deployment
   132  kubectl set image deploy helloworld-deployment k8s-demo=amitvashist7/k8s-tiny-web:4
-```
 
-
-```
 
   133  kubectl rollout status deploy helloworld-deployment
   134  kubectl rollout history deploy helloworld-deployment
