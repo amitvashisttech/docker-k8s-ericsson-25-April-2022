@@ -46,3 +46,23 @@
   155  kubectl rollout history deploy helloworld-deployment 
   160  history > README.md
 ```
+
+```
+  577  cd 02-K8s/
+  579  cd 05-Deployments/
+  581  kubectl get pods
+  582  kubectl  describe deploy helloworld-deployment
+  583  kubectl  get rs
+  584  kubectl  describe rs helloworld-deployment-8459cbc5b4
+  585  kubectl  describe deploy helloworld-deployment
+  586  ls
+  587  kubectl delete -f helloworld.yaml
+  588  cp -rf /root/helloworld-v2.yaml .
+  589  ls
+  590  vim helloworld-v2.yaml
+  591  kubectl  apply -f helloworld-v2.yaml
+  592  kubectl set image deploy helloworld-2-deployment k8s-demo=amitvashist7/k8s-tiny-web:3 --record
+  593  kubectl set image deploy helloworld-2-deployment k8s-demo=amitvashist7/k8s-tiny-web:4 --record
+  594  kubectl set image deploy helloworld-3-deployment k8s-demo=amitvashist7/k8s-tiny-web:2 --record
+  595  kubectl set image deploy helloworld-3-deployment k8s-demo=amitvashist7/k8s-tiny-web:3 --record
+```
