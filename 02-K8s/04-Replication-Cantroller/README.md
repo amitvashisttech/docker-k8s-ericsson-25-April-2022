@@ -35,7 +35,7 @@ Note Point : In Case you are getting imagepull error stating that you have reach
 # Docker login
 ```
 docker login
-ls /root/.docker/config.js
+ls /root/.docker/config.json
 ```
 
 # Create a Secret in K8s for Docker Registry
