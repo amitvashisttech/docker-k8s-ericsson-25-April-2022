@@ -28,7 +28,6 @@
  watch -n .5 kubectl get pods -o wide
 ```
 
-```
 
 Note Point : In Case you are getting imagepull error stating that you have reached to max limit of downloads, then apply the following solution. 
 
