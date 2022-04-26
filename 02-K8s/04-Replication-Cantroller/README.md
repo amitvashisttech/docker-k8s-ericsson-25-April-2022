@@ -27,3 +27,32 @@
 ```
  watch -n .5 kubectl get pods -o wide
 ```
+
+```
+
+Note Point : In Case you are getting imagepull error stating that you have reached to max limit of downloads, then apply the following solution. 
+
+# Docker login
+```
+docker login
+ls /root/.docker/config.js
+```
+
+# Create a Secret in K8s for Docker Registry
+```
+kubectl create secret generic regcred --from-file=.dockerconfigjson=/root/.docker/config.json --type=kubernetes.io/dockerconfigjson
+
+kubectl get secrets
+```
+
+## Update the Pull Defination in Yaml File 
+```
+      imagePullSecrets:
+      - name: regcred
+```
+
+## Now deploy the nginx POD.
+```
+kubectl apply -f helloworld-rc.yaml
+```
+     
