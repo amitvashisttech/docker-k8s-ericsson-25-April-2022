@@ -50,7 +50,7 @@ kubectl get secrets
       - name: regcred
 ```
 
-## Now deploy the nginx POD.
+## Now deploy helloworld Repication Cantroller:
 ```
 kubectl apply -f helloworld-rc.yaml
 ```
